@@ -610,8 +610,8 @@ final class BrowserPreferences {
     struct NewTabSettings {
         static var newTabDisplayOption: NewTabDisplayOption {
             get {
-                let rawValue = prefs.string(forSetting: "NewTabSettings", key: "newTabDisplayOption") ?? NewTabDisplayOption.homepage.rawValue
-                return NewTabDisplayOption(rawValue: rawValue) ?? .homepage
+                let rawValue = prefs.string(forSetting: "NewTabSettings", key: "newTabDisplayOption") ?? NewTabDisplayOption.customURL.rawValue
+                return NewTabDisplayOption(rawValue: rawValue) ?? .customURL
             }
             set {
                 prefs.set(newValue.rawValue, forSetting: "NewTabSettings", key: "newTabDisplayOption")
@@ -621,7 +621,7 @@ final class BrowserPreferences {
         
         static var customNewTabURL: String {
             get {
-                return prefs.string(forSetting: "NewTabSettings", key: "customNewTabURL") ?? ""
+                return prefs.string(forSetting: "NewTabSettings", key: "customNewTabURL") ?? "https://muse.ai"
             }
             set {
                 prefs.set(newValue.trimmingCharacters(in: .whitespacesAndNewlines), forSetting: "NewTabSettings", key: "customNewTabURL")
