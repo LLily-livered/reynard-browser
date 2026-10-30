@@ -42,9 +42,9 @@ fi
 
 # I absolutely hate Apple for this
 # Why is my bundle identifier just become unavailable for no reason?
-plutil -replace CFBundleIdentifier -string "local.museai.app" "$APP_PATH/Info.plist"
-plutil -replace CFBundleIdentifier -string "local.museai.app.Helper" "$APP_PATH/PlugIns/Reynard Helper.appex/Info.plist"
-plutil -replace CFBundleIdentifier -string "local.museai.app.OpenIn" "$APP_PATH/PlugIns/OpenIn.appex/Info.plist"
+plutil -replace CFBundleIdentifier -string "local.museapp.app" "$APP_PATH/Info.plist"
+plutil -replace CFBundleIdentifier -string "local.museapp.app.Helper" "$APP_PATH/PlugIns/Reynard Helper.appex/Info.plist"
+plutil -replace CFBundleIdentifier -string "local.museapp.app.OpenIn" "$APP_PATH/PlugIns/OpenIn.appex/Info.plist"
 
 rm -rf "$WORK_DIR" "$ROOT_DIR/dist/$OUTPUT_NAME"
 mkdir -p "$WORK_DIR/Payload"
