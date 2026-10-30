@@ -77,11 +77,11 @@ final class BrowserPreferences {
             key("BrowsingSettings", "readerViewFontType"): ReaderViewFontType.serif.rawValue,
             
             // New Tab
-            key("NewTabSettings", "newTabDisplayOption"): NewTabDisplayOption.homepage.rawValue,
-            key("NewTabSettings", "customNewTabURL"): "",
+            key("NewTabSettings", "newTabDisplayOption"): NewTabDisplayOption.customURL.rawValue,
+            key("NewTabSettings", "customNewTabURL"): "https://muse.ai",
             
             // Homepage
-            key("HomepageSettings", "openingScreen"): HomepageOpeningScreen.homepage.rawValue,
+            key("HomepageSettings", "openingScreen"): HomepageOpeningScreen.lastTab.rawValue,
             key("HomepageSettings", "showsFavorites"): true,
             key("HomepageSettings", "showsFavoritesInPrivateBrowsing"): false,
             key("HomepageSettings", "favoriteRowCount"): 2,
