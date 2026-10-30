@@ -168,6 +168,10 @@ final class BrowserViewController: UIViewController, GeckoScreenOrientationDeleg
         applyUpdateMenuButtonBadge()
         
         tabManager.createInitialTab()
+        if let selectedTab = tabManager.selectedTab,
+           selectedTab.url?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ?? true {
+            applyNewTabDisplayOption(toTabAt: tabManager.selectedTabIndex)
+        }
         refreshAddressBar()
         homepageOverlayCoordinator.updatePresentation(animated: false)
         
